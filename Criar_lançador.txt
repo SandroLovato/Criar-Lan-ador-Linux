@@ -1,0 +1,50 @@
+Criando o lançador
+
+Para criar o lançador e por se tratar de um arquivo de texto, iremos utilizar o editor de texto nano, para ser aplicável a qualquer ambiente gráfico.
+
+Crie o diretório dos lançadores.
+
+
+    mkdir ~/.local/share/applications/
+
+
+Para criar o lançador, abra o seu terminal e de o comando abaixo, como usuário comum, não é como root.
+
+Altere nomedoprograma para o mome do seu aplicativo.
+
+
+    nano ~/.local/share/applications/nomedoprograma.desktop 
+
+
+No editor aberto cole as linhas abaixo substituindo as linhas em vermelho pelas informações reais do seu aplicativo.
+
+
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Nome do aplicativo
+Comment=Uma breve descrição do aplicativo
+Icon=/endereço/do/ícone/icon.png do aplicativo
+Exec=/endereço/do/aplicativo/executável do aplicativo
+Terminal=false
+StartupNotify=false
+Categories=Network; A categoria que o aplicativo deve aparecer no menu
+
+No exemplo fictício usei o "Meu-Programa".
+
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Meu-Programa
+Comment=Programa para desktop
+Icon=/usr/share/meu-programa/icon.png
+Exec=/usr/share/meu-programa/start_meu_programa.sh
+Terminal=false
+StartupNotify=false
+Categories=Utility;
+
+Com o lançador pronto, salve teclando
+
+Ctrl + x tecle s e tecle Enter para fechar.
+
+Pronto vá ao menu e seu aplicativo está la na categoria Utilitários como eu setei na ultima linha.
